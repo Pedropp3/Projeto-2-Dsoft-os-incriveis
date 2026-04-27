@@ -30,3 +30,9 @@ def calcula_pontos_regra_simples (faces):
         valores[contagem] = soma
         contagem = contagem + 1
     return valores
+
+def calcula_pontos_soma (faces):
+    soma = 0
+    for face in faces:
+        soma = soma + face
+    return soma
