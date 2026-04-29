@@ -103,3 +103,21 @@ def calcula_pontos_quadra(dados):
             return soma
 
     return 0
+
+def calcula_pontos_quina(dados):
+    quantidades = []
+
+    for dado in dados:
+        quantidade = 0
+
+        for dadoo in dados:
+            if dado == dadoo:
+                quantidade = quantidade + 1
+
+        quantidades.append(quantidade)
+
+    for quantidade in quantidades:
+        if quantidade >= 5:
+            return 50
+
+    return 0
