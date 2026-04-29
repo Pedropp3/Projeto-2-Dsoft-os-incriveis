@@ -80,3 +80,26 @@ def calcula_pontos_full_house (dados):
         return dados[0] + dados[1] + dados[2] + dados[3] + dados[4]
     else:
         return 0
+    
+def calcula_pontos_quadra(dados):
+    quantidades = []
+
+    for dado in dados:
+        quantidade = 0
+
+        for dadoo in dados:
+            if dado == dadoo:
+                quantidade = quantidade + 1
+
+        quantidades.append(quantidade)
+
+    for quantidade in quantidades:
+        if quantidade >= 4:
+            soma = 0
+
+            for dado in dados:
+                soma = soma + dado
+
+            return soma
+
+    return 0
