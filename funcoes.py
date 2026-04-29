@@ -62,3 +62,21 @@ def calcula_pontos_sequencia_alta (faces):
         return 30
     else:
         return 0
+    
+def calcula_pontos_full_house (dados):
+    
+    quantidades = []
+
+    for dado in dados:
+        quantidade = 0
+
+        for dadoo in dados:
+            if dado == dadoo:
+                quantidade = quantidade + 1
+
+        quantidades.append(quantidade)
+
+    if 3 in quantidades and 2 in quantidades:
+        return dados[0] + dados[1] + dados[2] + dados[3] + dados[4]
+    else:
+        return 0
