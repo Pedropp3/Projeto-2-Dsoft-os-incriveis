@@ -1,3 +1,3 @@
 from funcoes import *
 
-print(calcula_pontos_quina([5, 2, 5, 5, 2]))
+print (calcula_pontos_regra_avancada([4, 4, 4, 4, 4]))
