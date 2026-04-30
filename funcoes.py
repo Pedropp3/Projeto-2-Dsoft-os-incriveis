@@ -133,3 +133,10 @@ def calcula_pontos_regra_avancada(dados):
     pontos["sequencia_baixa"] = calcula_pontos_sequencia_baixa(dados)
 
     return pontos
+
+def faz_jogada (dados,categoria,diciocartela):
+    if categoria in ["123456"]:
+        diciocartela[categoria] = calcula_pontos_regra_simples(dados)
+    else:
+        diciocartela[categoria] = calcula_pontos_regra_avancada(dados)
+    return diciocartela
