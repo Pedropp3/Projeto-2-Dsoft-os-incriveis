@@ -135,8 +135,11 @@ def calcula_pontos_regra_avancada(dados):
     return pontos
 
 def faz_jogada (dados,categoria,diciocartela):
-    if categoria in ["123456"]:
-        diciocartela[categoria] = calcula_pontos_regra_simples(dados)
+    if categoria in [1,2,3,4,5,6]:
+        simples = calcula_pontos_regra_simples(dados)
+        diciocartela["regra_simples"][categoria] = simples[categoria]
     else:
-        diciocartela[categoria] = calcula_pontos_regra_avancada(dados)
+        avancado = calcula_pontos_regra_avancada(dados)
+        diciocartela["regra_avancada"][categoria] = avancado[categoria]
+        
     return diciocartela
